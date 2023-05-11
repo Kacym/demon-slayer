@@ -5,16 +5,13 @@ import { useState } from 'react'
 import ChangeCategory from './components/change-category/ChoiseCategory';
 import Header from './components/header/Header';
 
-function App() {
 
-  window.onload = function() {
-    document.getElementById()
-  }
+function App() {
   
   const [showComponents, setShowComponents] = useState(false);
 
   function changeState() {
-    setShowComponents((prev) => !prev)
+    setShowComponents((prev) => !prev);
   }
 
   return (
@@ -22,12 +19,12 @@ function App() {
       
       <Header isVisible={showComponents} changeState={changeState}/>
       <Container>
-      
         {
         showComponents ? <ChangeCategory /> : <MainMenu changeState = {changeState}/>
         }
 
       </Container>
+      
     </div>
   );
 }

@@ -4,7 +4,6 @@ import Button from '../UI/button/Button';
 
 
 const MainMenu = ( {changeState} ) => {
-    console.log(changeState);
   return (
     <StyledMainMenu>
     <Title>Demon slayer</Title>
@@ -33,15 +32,13 @@ const MainMenu = ( {changeState} ) => {
 }
 
 const ZoomOut = keyframes`
-    0% {transform: scale(15); overflow: hidden;};
-    50% {transform: scale(1.5)};
-    70% {transform: scale(1.5)}
-    100% {transform: scale(1)}
+    from {transform: scale(15); overflow: hidden;};
+    to {transform: scale(1)};
 `
 const StyledMainMenu = styled.div`
     overflow-y: hidden;
     transition: 10s;
-    animation-duration: 6s;
+    animation-duration: 4s;
     animation-name: ${ZoomOut};
 `
 const Title = styled.h1`
