@@ -2,12 +2,14 @@ import { styled } from 'styled-components';
 import './App.css';
 import MainMenu from './components/main-menu/MainMenu';
 import { useState } from 'react'
-import ChangeCategory from './components/change-category/ChoiseCategory';
+import ChoiseCategory from './components/change-category/ChoiseCategory';
 import Header from './components/header/Header';
 
 
+
+
 function App() {
-  
+
   const [showComponents, setShowComponents] = useState(false);
 
   function changeState() {
@@ -15,17 +17,20 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <>
+      <div className="App">
       
       <Header isVisible={showComponents} changeState={changeState}/>
       <Container>
         {
-        showComponents ? <ChangeCategory /> : <MainMenu changeState = {changeState}/>
+        showComponents ? <ChoiseCategory /> : <MainMenu changeState = {changeState}/>
         }
 
       </Container>
       
-    </div>
+      </div>
+      </>
+
   );
 }
 
