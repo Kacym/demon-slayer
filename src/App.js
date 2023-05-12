@@ -1,42 +1,48 @@
-import { styled } from 'styled-components';
-import './App.css';
-import MainMenu from './components/main-menu/MainMenu';
-import { useState } from 'react'
-import ChoiseCategory from './components/change-category/ChoiseCategory';
-import Header from './components/header/Header';
+import { styled } from "styled-components";
+import "./App.css";
+import { useState } from "react";
 
-
-
+import MainMenu from "./components/main-menu/MainMenu";
+import ChoiseCategory from "./components/change-category/ChoiseCategory";
+import Header from "./components/header/Header";
+import DemonsMainPage from "./components/Demons-page/main-page/DemonsMainPage";
+import DemonsDocumentation from "./components/Demons-page/documentation/DemonsDocumentation";
+import { Route, Routes, useNavigate } from "react-router-dom";
 
 function App() {
-
-  const [showComponents, setShowComponents] = useState(false);
+  const navigate = useNavigate();
 
   function changeState() {
-    setShowComponents((prev) => !prev);
+    navigate('choise-category');
   }
+  const navigateMainHandler = () => {
+    navigate("/");
+  };
 
   return (
     <>
       <div className="App">
+        <Header isVisible={true} changeState={navigateMainHandler} />
+        <Container>
       
-      <Header isVisible={showComponents} changeState={changeState}/>
-      <Container>
-        {
-        showComponents ? <ChoiseCategory /> : <MainMenu changeState = {changeState}/>
-        }
-
+      
+      <Routes>
+        <Route path="/" element={<MainMenu changeState={changeState} />} />
+        <Route
+          path="demons-main-page"
+          element={<DemonsMainPage />}
+        />
+        <Route path="choise-category" element={<ChoiseCategory />} />
+      </Routes>
       </Container>
-      
       </div>
-      </>
-
+    </>
   );
 }
 
 const Container = styled.div`
   width: 90%;
   margin: 0 auto;
-`
+`;
 
 export default App;

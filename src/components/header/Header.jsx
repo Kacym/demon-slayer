@@ -22,7 +22,7 @@ const Header = ({changeState, isVisible}) => {
 
 const StyledHeader = styled.header`
     background-color: gray;
-    opacity: 0%;
+    opacity: 10%;
     transition: .9s;
     &:hover {
         opacity: 80%;

@@ -12,6 +12,7 @@ import DemonsMainPage from '../Demons-page/main-page/DemonsMainPage'
 const ChoiseCategory = () => {
   return (
     <>
+    <Link to='choise-category'></Link>
     <Container>
         <h1>Выберите категорию</h1>
         <DemonsAndSlayers>
@@ -45,10 +46,10 @@ const ChoiseCategory = () => {
         </DemonsAndSlayers>
     </Container>
 
-          <Routes>
+          {/* <Routes>
             <Route exact path='/demons-main-page' Component={DemonsMainPage}/>
             <Route exact path='/slayers-main-page' Component={DemonsMainPage}/>
-          </Routes>
+          </Routes> */}
     </>
   )
 }
