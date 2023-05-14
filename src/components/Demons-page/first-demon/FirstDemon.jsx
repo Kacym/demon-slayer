@@ -2,7 +2,9 @@ import React from 'react'
 
 const FirstDemon = () => {
   return (
-    <div>FirstDemon</div>
+    <div>
+      <h1>Данная информация еще не загружена</h1>
+    </div>
   )
 }
 

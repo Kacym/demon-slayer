@@ -12,7 +12,7 @@ const AudioTag = (props) => {
 }
 
 const StyledAudio = styled.audio`
-    width: 100px;
+    width: 300px;
 `
 
 export default AudioTag

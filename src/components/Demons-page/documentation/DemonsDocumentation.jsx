@@ -20,16 +20,18 @@ const MainBox = styled.div`
 const StyledContainer = styled.div`
     border: solid;
     margin: 0 auto;
-    width: 68%;
+    width: 70%;
     padding: 30px;
+    font-weight: 100;
     *{
         color: white;
     }
 `
 
 const ContainerTitle = styled.h1`
+    border: solid;
+    width: 60%;
     text-align: center;
-    width: 50%;
     margin: 0 auto;
 ` 
 const StyledLine = styled.hr`

@@ -4,9 +4,7 @@ import Kokushibo from "../tools/gifs/Kokushibo.mp4"
 import Yoriichi from "../tools/gifs/Yoriichi.mp4"
 import VideoTag from '../UI/video-tag/VideoTag'
 
-import { useTransition, animated } from '@react-spring/web';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import DemonsMainPage from '../Demons-page/main-page/DemonsMainPage'
+import { Link } from 'react-router-dom'
 
 
 const ChoiseCategory = () => {
@@ -21,11 +19,11 @@ const ChoiseCategory = () => {
             <VideoTag autoPlay video={Kokushibo}/>
             <CategoryTitle><Link to='/demons-main-page'>Демоны</Link></CategoryTitle>
             <StyledList> 
-              <li><Link>Первый демон</Link></li>
-              <li><Link>Высшие луны</Link></li>
-              <li><Link>Низшие луны</Link></li>
-              <li><Link>Другие демоны</Link></li>
-              <li><Link>Документация</Link></li>
+              <li><Link to='/first-demon'>Первый демон</Link></li>
+              <li><Link to='/upper-moons'>Высшие луны</Link></li>
+              <li><Link to='/lower-moons'>Низшие луны</Link></li>
+              <li><Link to='/other-demons'>Другие демоны</Link></li>
+              <li><Link to='/demons-documentation'>Документация</Link></li>
               
             </StyledList>
 
@@ -35,11 +33,11 @@ const ChoiseCategory = () => {
             <VideoTag autoPlay video={Yoriichi}/>
             <CategoryTitle><Link to='/slayers-main-page'>Охотники</Link></CategoryTitle>
             <StyledList> 
-            <li><Link>Первый охотник</Link></li>               
-              <li><Link>Столпы</Link></li>
-              <li><Link>команда Танджиро</Link></li>
-              <li><Link>Другие охотники</Link></li>
-              <li><Link>Документация</Link></li>
+            <li><Link to="/first-slayer">Первый охотник</Link></li>               
+              <li><Link to="/hashira">Столпы</Link></li>
+              <li><Link to="/Tanjiro-team">команда Танджиро</Link></li>
+              <li><Link to="/other-slayers">Другие охотники</Link></li>
+              <li><Link to="/slayers-documentation">Документация</Link></li>
             </StyledList>
           </Slayers>
           
@@ -68,6 +66,10 @@ const Container = styled.div`
   animation-duration: 5s;
   text-align: center;
   animation-name: ${ZoomOut};
+
+  *{
+    text-decoration: none;
+  }
 `
 const Demons = styled.div`
   border: solid red;
