@@ -5,15 +5,14 @@ import AudioTag from '../tools/audio-tag/AudioTag'
 import BackgroundMusic from "../../audio/background-music.mp3"
 import { Link } from 'react-router-dom'
 
-const Header = ({changeState, isVisible, showModal}) => {
+const Header = ({showModal, isVisible}) => {
 
   return (
     <StyledHeader>
         <HeaderContainer>
             {isVisible && <Button w="150px" h="40px" bgColor="red" title="Выход" onClick={showModal}/>}
-
             <>
-      <AudioTag src={BackgroundMusic} controls="controls" autoPlay="autoPlay" loop></AudioTag>
+        <AudioTag src={BackgroundMusic} controls="controls" autoPlay="autoPlay" loop></AudioTag>
             </>
 
             <NavBar>

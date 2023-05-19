@@ -16,7 +16,7 @@ const ChoiseCategory = () => {
         <DemonsAndSlayers>
 
           <Demons>
-            <VideoTag autoPlay video={Kokushibo}/>
+            <VideoTag w="100%" autoPlay video={Kokushibo}/>
             <CategoryTitle><Link to='/demons-main-page'>Демоны</Link></CategoryTitle>
             <StyledList> 
               <li><Link to='/first-demon'>Первый демон</Link></li>
@@ -30,7 +30,7 @@ const ChoiseCategory = () => {
           </Demons>
 
           <Slayers>
-            <VideoTag autoPlay video={Yoriichi}/>
+            <VideoTag w="100%" autoPlay video={Yoriichi}/>
             <CategoryTitle><Link to='/slayers-main-page'>Охотники</Link></CategoryTitle>
             <StyledList> 
             <li><Link to="/first-slayer">Первый охотник</Link></li>               
@@ -53,14 +53,13 @@ const ChoiseCategory = () => {
 }
 
 const ZoomOut = keyframes`
-    from {margin-left: 1000px;}
-    to {margin-left: 0px}
+    from {margin-left: 1000px; overflow: hidden}
+    to {margin-left: 0px; overflow: hidden}
 `
 
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  overflow: hidden;
   border: solid;
   transition: 1s;
   animation-duration: 5s;

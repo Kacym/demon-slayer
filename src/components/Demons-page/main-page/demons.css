@@ -1,0 +1,10 @@
+/* p:nth-child(2n) {
+    font-size: 25px;
+    color: blue;;
+} */
+li:first-child > p:first-child {
+    color: green;
+}
+ul:first-child p{
+    color: #000;
+}

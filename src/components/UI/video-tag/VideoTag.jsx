@@ -10,7 +10,7 @@ const VideoTag = (props) => {
   `
 
   return (
-    <StyledVideo w="100%" autoPlay loop src={props.video}/>
+    <StyledVideo style={props.style} width={props.w} autoPlay loop src={props.video}/>
 
   )
 }
